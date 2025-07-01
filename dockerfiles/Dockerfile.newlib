@@ -4,9 +4,9 @@ RUN apt-get update && \
     apt-get install -y gcc-arm-none-eabi build-essential && \
     mkdir /app
 
-COPY test.c /app/
+COPY srcs/test.c /app/
 WORKDIR /app
 
-RUN arm-none-eabi-gcc test.c -o test.out --specs=nosys.specs -lc -lnosys
+RUN arm-none-eabi-gcc /app/test.c -o test.out --specs=nosys.specs -lc -lnosys
 
 CMD ["./test.out"] 

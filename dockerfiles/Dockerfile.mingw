@@ -12,11 +12,11 @@ RUN apt-get update && \
     apt-get install -y mingw-w64 && \
     mkdir /app
 
-COPY test.c /app/
+COPY srcs/test.c /app/
 WORKDIR /app
 
 # MinGWでWindows用にクロスコンパイル
-RUN x86_64-w64-mingw32-gcc test.c -o test.exe
+RUN x86_64-w64-mingw32-gcc /app/test.c -o test.exe
 
 # Wine経由で実行
 CMD ["wine", "test.exe"] 

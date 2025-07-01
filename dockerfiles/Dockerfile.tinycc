@@ -4,10 +4,10 @@ RUN apt-get update && \
     apt-get install -y tcc && \
     mkdir /app
 
-COPY test.c /app/
+COPY srcs/test.c /app/
 WORKDIR /app
 
 # TinyCC (TCC)を使用
-RUN tcc test.c -o test.out
+RUN tcc /app/test.c -o test.out
 
 CMD ["./test.out"] 
