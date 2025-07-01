@@ -1,0 +1,27 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    ca-certificates \
+    wget \
+    mingw-w64 \
+    wine-stable \
+    winbind \
+    && rm -rf /var/lib/apt/lists/* && \
+    mkdir /app
+
+COPY srcs/test.c /app/
+WORKDIR /app
+
+# MinGWでWindows用にクロスコンパイル
+RUN x86_64-w64-mingw32-gcc -O2 /app/test.c -o test.exe
+
+# Wine環境の設定
+ENV WINEARCH=win64
+ENV WINEPREFIX=/root/.wine
+
+# Wineの初期化
+RUN wine wineboot --init
+
+# Wine経由でWindowsバイナリを実行
+CMD ["wine", "test.exe"] 

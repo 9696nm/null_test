@@ -7,6 +7,7 @@ RUN apt-get update && \
 COPY srcs/test.c /app/
 WORKDIR /app
 
+# ARM GCC (Newlib)を使用
 RUN arm-none-eabi-gcc /app/test.c -o test.out --specs=nosys.specs -lc -lnosys
 
 CMD ["./test.out"] 

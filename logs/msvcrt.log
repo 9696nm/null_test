@@ -1,0 +1,10 @@
+it looks like wine32 is missing, you should install it.
+multiarch needs to be enabled first.  as root, please
+execute "dpkg --add-architecture i386 && apt-get update &&
+apt-get install wine32"
+0009:err:msvcrt:MSVCRT__invalid_parameter (null):0 (null): (null) 0
+Start
+(null)
+ret:7 errno:0
+ret:-1 errno:22
+End
