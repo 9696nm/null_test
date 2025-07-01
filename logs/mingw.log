@@ -1,0 +1,150 @@
+wine: created the configuration directory '/root/.wine'
+002c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+004c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+0054:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+004c:err:vulkan:vulkan_init_once Failed to load libvulkan.so.1
+004c:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+004c:err:winediag:nodrv_CreateWindow L"The explorer process failed to start."
+004c:err:systray:initialize_systray Could not create tray window
+004c:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+004c:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+004c:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+002c:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+002c:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+0054:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+0054:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+0054:err:ole:apartment_createwindowifneeded CreateWindow failed with error 1400
+0054:err:ole:apartment_createwindowifneeded CreateWindow failed with error 1400
+0054:err:ole:apartment_createwindowifneeded CreateWindow failed with error 1400
+0054:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80070578
+0054:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80070578
+0054:err:ole:apartment_get_local_server_stream Failed: 0x80070578
+0054:err:ole:start_rpcss Failed to open RpcSs service
+0044:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+0044:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+0094:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+0094:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+009c:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+009c:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+00ec:fixme:msg:pack_message msg 14 (WM_ERASEBKGND) not supported yet
+00ec:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+00ec:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+002c:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+0110:err:ntoskrnl:ZwLoadDriver failed to create driver L"\\Registry\\Machine\\System\\CurrentControlSet\\Services\\winebth": c00000e5
+002c:err:setupapi:SetupDiInstallDevice Failed to start service L"winebth" for device L"ROOT\\WINE\\WINEBTH", error 1359.
+002c:err:setupapi:SetupDiInstallDevice Failed to control service L"winebth" for device L"ROOT\\WINE\\WINEBTH", error 1062.
+002c:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+0138:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+002c:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+0138:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+Start
+(null)
+ret:7 errno:0
+wine: Unhandled page fault on read access to 0000000000000000 at address 0000000140004308 (thread 0164), starting debugger...
+WineDbg attached to pid 0160
+016c:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+016c:err:winediag:nodrv_CreateWindow L"Make sure that your display server is running and that its variables are set."
+016c:fixme:dbghelp:elf_search_auxv can't find symbol in module
+Unhandled exception: page fault on read access to 0x0000000000000000 in 64-bit code (0x00000140004308).
+016c:fixme:dbghelp:elf_search_auxv can't find symbol in module
+Register dump:
+ rip:0000000140004308 rsp:00007ffffe2ffd00 rbp:00007ffffe2ffdb0 eflags:00010246 (  R- --  I  Z- -P- )
+ rax:0000000000000000 rbx:0000000000000001 rcx:0000000000000000 rdx:0000000000000000
+ rsi:0000000000000000 rdi:0000000000006000  r8:0000000000000000  r9:0000000000000000 r10:00007ffffe0ffae4
+ r11:0000000000000202 r12:00006ffffef601f0 r13:00007ffffe325be0 r14:00007ffffe2ffeb8 r15:0000000000000000
+Stack dump:
+0x007ffffe2ffd00:  0000000000000008 00007ffffe8a0000
+0x007ffffe2ffd10:  00007ffffe2ffea0 000000000000100a
+0x007ffffe2ffd20:  00007ffffe8a0000 0000000000000000
+0x007ffffe2ffd30:  0000000000000100 00006fffffc3a06b
+0x007ffffe2ffd40:  000000007ffc0000 00007ffffe2ffd8c
+0x007ffffe2ffd50:  00006ffffef46b06 00007ffffe2ffe50
+0x007ffffe2ffd60:  00007ffffe2ffdd0 00006fffffc5cd2e
+0x007ffffe2ffd70:  0000000000000000 0000000140007512
+0x007ffffe2ffd80:  00006ffffef601f0 fffffffe00006000
+0x007ffffe2ffd90:  fffffffdffffffff 0000000000000000
+0x007ffffe2ffda0:  00007ffffe2f0000 00007fff00000000
+0x007ffffe2ffdb0:  00006ffffef601f0 00006ffffef601f0
+Backtrace:
+=>0 0x00000140004308 in test (+0x4308) (0x007ffffe2ffdb0)
+  1 0x000001400026e3 in test (+0x26e3) (0x007ffffe2ffe30)
+  2 0x000001400014c7 in test (+0x14c7) (0x007ffffe2ffe90)
+  3 0x00000140001557 in test (+0x1557) (0x007ffffe2ffee0)
+  4 0x00000140001307 in test (+0x1307) (0x007ffffe2fff10)
+  5 0x0000014000142a in test (+0x142a) (0x007ffffe2fff70)
+  6 0x006fffffa54819 BaseThreadInitThunk+0x9(unknown=<internal error>, entry=<internal error>, arg=<internal error>) [/usr/src/packages/BUILD/dlls/kernel32/thread.c:61] in kernel32 (0000000000000000)
+  7 0x006fffffc2fa1b in ntdll (+0xfa1b) (0000000000000000)
+0x00000140004308 test+0x4308: movsbl (%rsi), %ecx
+Modules:
+Module  Address                                 Debug info      Name (11 modules)
+PE             140000000-       14003f000       Dwarf-5         test
+PE-Wine     6ffffeed0000-    6fffff260000       Deferred        msvcrt
+PE-Wine     6fffff3c0000-    6fffffa25000       Deferred        kernelbase
+PE-Wine     6fffffa40000-    6fffffc07000       Dwarf-4         kernel32
+PE-Wine     6fffffc20000-    6ffffffe5000       Dwarf-4         ntdll
+ELF         73057f67f000-    73057f6b1000       Deferred        liblzma.so.5
+ELF         73057f6b1000-    73057f6cc000       Deferred        libunwind.so.8
+ELF         73057f6cc000-    73057f78c000       Export          ntdll.so
+ELF         73057f78f000-    73057f9a1000       Deferred        libc.so.6
+ELF         73057f9ad000-    73057f9e7000       Deferred        ld-linux-x86-64.so.2
+ELF         73057f9e7000-    73057f9ec000       Deferred        <wine-loader>
+Threads:
+process  tid      prio    name (all IDs are in hex)
+00000020 start.exe
+	00000024    0     
+00000030 services.exe
+	00000034    0     
+	00000038    0     wine_rpcrt4_server
+	0000003c    0     
+	00000074    0     wine_rpcrt4_io
+	000000b8    0     wine_rpcrt4_io
+	000000d0    0     wine_rpcrt4_io
+	000000fc    0     wine_threadpool_worker
+	0000010c    0     wine_threadpool_worker
+	0000011c    0     wine_threadpool_worker
+	00000120    0     wine_threadpool_waitqueue
+	0000012c    0     wine_rpcrt4_io
+	0000014c    0     wine_rpcrt4_io
+00000048 explorer.exe
+	0000004c    0     
+	0000005c    0     wine_explorer_display_settings_restorer
+0000006c winedevice.exe
+	00000070    0     
+	0000007c    0     
+	00000080    0     wine_sechost_service
+	00000084    0     
+	00000088    0     
+	000000e0    0     
+	000000e4    0     
+000000b0 svchost.exe
+	000000b4    0     
+	000000c0    0     
+	000000c4    0     wine_sechost_service
+000000c8 plugplay.exe
+	000000cc    0     
+	000000d4    0     
+	000000d8    0     wine_sechost_service
+	000000dc    0     wine_rpcrt4_server
+	00000158    0     wine_rpcrt4_io
+	0000015c    0     wine_threadpool_worker
+00000124 winedevice.exe
+	00000128    0     
+	00000130    0     
+	00000134    0     wine_sechost_service
+	00000138    0     
+	0000013c    0     
+	00000140    0     
+	00000148    0     
+	00000150    0     
+	00000154    0     
+00000160 (D) Z:\app\test.exe
+	00000164    0 <== 
+	00000170    0     
+System information:
+    Wine build: wine-10.0
+    Platform: x86_64 (guest: i386)
+    Version: Windows 10
+    Host system: Linux
+    Host version: 6.6.87.2-microsoft-standard-WSL2

@@ -1,0 +1,17 @@
+FROM debian:bookworm
+
+RUN apt-get update && \
+    apt-get install -y wget gnupg lsb-release software-properties-common && \
+    wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - && \
+    echo "deb http://apt.llvm.org/bookworm/ llvm-toolchain-bookworm-16 main" >> /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y clang-16 && \
+    mkdir /app
+
+COPY test.c /app/
+WORKDIR /app
+
+# Clang 16を使用
+RUN clang-16 test.c -o test.out
+
+CMD ["./test.out"] 

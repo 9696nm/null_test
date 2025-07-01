@@ -1,0 +1,11 @@
+FROM alpine:3.20
+
+RUN apk add --no-cache gcc musl-dev
+
+COPY test.c /app/
+WORKDIR /app
+
+RUN gcc test.c -o test.out
+
+CMD ["./test.out"]
+

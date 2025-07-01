@@ -1,0 +1,22 @@
+FROM ubuntu:latest
+
+# winehqのリポジトリを追加し、wine64をインストール
+RUN apt-get update && \
+    apt-get install -y software-properties-common wget && \
+    dpkg --add-architecture i386 && \
+    mkdir -pm755 /etc/apt/keyrings && \
+    wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key && \
+    wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources && \
+    apt-get update && \
+    apt-get install -y --install-recommends winehq-stable && \
+    apt-get install -y mingw-w64 && \
+    mkdir /app
+
+COPY test.c /app/
+WORKDIR /app
+
+# MinGWでWindows用にクロスコンパイル
+RUN x86_64-w64-mingw32-gcc test.c -o test.exe
+
+# Wine経由で実行
+CMD ["wine", "test.exe"] 
